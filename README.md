@@ -14,4 +14,4 @@ if you returned to the main menu and entered the queue again all of the data wil
 
 # other
 Destructors where used at the end to deleted all the dynamically created varaibles.
-Note: I recommend exiting using the 0 number as mentioned in the program because if the program didn't stop correctly destructors won't activate therfore there will be no clean up.  \
+Note: I recommend exiting using the 0 number as mentioned in the program because if the program didn't stop correctly destructors won't activate therfore there will be no clean up.
