@@ -4,46 +4,33 @@ M&Z Library is a library management system designed to facilitate the organizati
 
 ## Programming Language
 
-- **C++**: The program is implemented in C++, a language known for its performance, efficiency, and support for `OOP` and procedural programming paradigms. The language allows for low-level memory management and precise control over data structures, making it a suitable choice for developing a library management system.
+- **C++**: The program is implemented in C++, a language known for its performance, efficiency, and support for OOP and procedural programming paradigms. The language allows for low-level memory management and precise control over data structures, making it a suitable choice for developing a library management system.
 
 ## Data Structures Used
 
 - **Singly Linked Lists**: Used to manage a collection of books, providing dynamic allocation and efficient insertion and deletion operations.
-- **Queue**: Utilized for managing queues for each book, tracking customer reservations and providing information about each book's availability.
+- **Queue**: Utilized for managing queues for each book, tracking customer reservations, and providing information about each book's availability.
 
-## Books
+## Features
 
-The code allows you to save your books in a text file and then access them using the program. You can add or delete books, and these changes will be effectively reflected in the text file. You can view all the books and check the number of a specific book by typing its name.
+- **Books**: Allows you to save your books in a text file and then access them using the program. You can add or delete books, and these changes will be effectively reflected in the text file. You can view all the books and check the number of a specific book by typing its name.
+- **Queue Management**: Connects a queue for each book that can be accessed using its index or name. Actions you can perform include:
+    - Adding a person to the queue.
+    - Checking whose turn it is to use the book.
+    - Checking a customer's number in line and how many people are ahead of them.
+    - Checking the status of the whole queue.
+- **Data Persistence**: Destructors were used at the end to delete all dynamically created variables. **Note**: It is recommended to exit using the number `0` as mentioned in the program. If the program does not stop correctly, destructors will not activate, and there will be no clean-up.
 
-## Queue
+## Classes
 
-The code connects a queue for each book that can be accessed using its index or name.
-
-Within the queue, there are multiple actions you can perform, such as:
-
-- Adding a person to the queue.
-- Checking whose turn it is to use the book.
-- Checking a customer's number in line and how many people are ahead of them.
-- Checking the status of the whole queue.
-
-If you return to the main menu and enter the queue again, all of the data will still be reserved.
-
-## Other
-
-Destructors were used at the end to delete all dynamically created variables. **Note**: It is recommended to exit using the number `0` as mentioned in the program. If the program does not stop correctly, destructors will not activate, and there will be no clean-up.
-
-## Queue and Book Management System
-
-### Classes
-
-#### Queue Class
+### Queue Class
 
 - `class queue`: Represents a queue for customers waiting for a book.
 - Properties:
     - `name_of_customer`: Name of the customer in the queue.
     - `next`: Pointer to the next queue node.
 
-#### Node Class
+### Node Class
 
 - `class node`: Represents a book node in the linked list.
 - Properties:
@@ -54,7 +41,7 @@ Destructors were used at the end to delete all dynamically created variables. **
 - Destructor:
     - Deletes the book queue when the node is destroyed.
 
-#### LinkedListForQueue Class
+### LinkedListForQueue Class
 
 - `class linkedlistforqueue`: Represents a queue for a specific book.
 - Properties:
@@ -71,7 +58,7 @@ Destructors were used at the end to delete all dynamically created variables. **
     - `getstatus()`: Displays the status of the queue.
     - `whenismyturn(myname)`: Displays the customer's position in the queue.
 
-#### LinkedListForBooks Class
+### LinkedListForBooks Class
 
 - `class linkedlistforbooks`: Represents a linked list of books.
 - Properties:
@@ -94,34 +81,48 @@ Destructors were used at the end to delete all dynamically created variables. **
 - Destructor:
     - Saves book data to a file when the list is destroyed.
 
+## Functions
+
 ### Main Functions
 
-#### Insert Options for Book
+- **Insert Options for Book**:
+    - Function: `insertoptionsforbook(books)`: Allows the user to insert books at the beginning, end, or a specific position in the list.
+- **Delete Options for Book**:
+    - Function: `deleteoptionsforbook(books)`: Allows the user to delete books from the beginning, end, or a specific position in the list.
+- **Queue Management**:
+    - Function: `QUEUE(queue, choice)`: Allows the user to manage the queue for a specific book, such as reserving, finishing, or checking the queue.
+- **Main Menu**:
+    - Function: `mainmenu(books, choice)`: Provides a main menu for managing books and queues.
 
-- Function: `insertoptionsforbook(books)`
-    - Allows the user to insert books at the beginning, end, or a specific position in the list.
+### Main Function
 
-#### Delete Options for Book
+- **Main Function**:
+    - Function: `main()`: Initializes the linked list of books and displays a welcome message. Loops through the main menu to allow user interaction.
 
-- Function: `deleteoptionsforbook(books)`
-    - Allows the user to delete books from the beginning, end, or a specific position in the list.
+## Screenshots
 
-### Queue Management
+Here are some screenshots of the Snake Game:
 
-- Function: `QUEUE(queue, choice)`
-    - Allows the user to manage the queue for a specific book, such as reserving, finishing, or checking the queue.
+- **Main Page**:
 
-### Main Menu
+![Main Page](Screenshots/Mainpage.jpeg)
 
-- Function: `mainmenu(books, choice)`
-    - Provides a main menu for managing books and queues.
+- **Screen 01**:
 
-## Main Function
+![Screen 01](Screenshots/Screen01.jpeg)
 
-- Function: `main()`
-    - Initializes the linked list of books and displays a welcome message.
-    - Loops through the main menu to allow user interaction.
+- **Screen 02**:
+ 
+![Screen 02](Screenshots/Screen02.jpeg)
+
+- **Screen 03**:
+ 
+![Screen 03](Screenshots/Screen03.jpeg)
+
+- **Screen 04**:
+   
+![Screen 04](Screenshots/Screen04.jpeg)
 
 ## Contact
 
-For any questions or feedback, You can contact me via email at [mahmoudnaif788@gmail.com](mailto:mahmoudnaif788@gmail.com).
+For any questions or feedback, you can contact me via email at [mahmoudnaif788@gmail.com](mailto:mahmoudnaif788@gmail.com).
