@@ -170,8 +170,8 @@ public:
         }
 
         else {
-            cout <<RED_TEXT<<"FAILED TO READ DATA\n"<<RESET_TEXT;
-            exit(-5);
+             cout <<RED_TEXT<<"FAILED TO READ DATA\n YOU CAN STILL USE THE APP BY ADDING YOUR OWN BOOKS MANUALLY\n PLEASE MAKE SURE THAT THE TEXT BOOKS FILE IS IN THE CORRECT PASS\n"<<RESET_TEXT;
+
         }
         input.close();
     }
